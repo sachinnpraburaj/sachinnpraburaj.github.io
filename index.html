@@ -47,7 +47,7 @@
             margin: 0 15px;
         }
         nav ul li a {
-            color: white;
+            color: var(--accent-color);
             text-decoration: none;
             font-weight: bold;
         }
@@ -58,9 +58,11 @@
             background: white;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
         }
         h2 {
             color: var(--accent-color);
+            text-align: center;
         }
         a {
             color: var(--accent-color);
@@ -73,15 +75,14 @@
             background: var(--secondary-color);
             color: white;
             padding: 10px;
-            position: fixed;
+            position: relative;
             width: 100%;
-            bottom: 0;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="profile.jpeg" alt="Sachin Prabhu" class="profile-img">
+        <img src="profile.jpg" alt="Sachin Prabhu" class="profile-img">
         <div>
             <h1>Sachin Prabhu Thandapani</h1>
             <p>Data Scientist | ML Engineer | AI Enthusiast</p>
@@ -105,19 +106,38 @@
     
     <section id="experience">
         <h2>Work Experience</h2>
-        <p>Staff Data Scientist, Royal Bank of Canada</p>
-        <p>Senior Data Scientist, Royal Bank of Canada</p>
+        <div class="work">
+            <h3>Staff Data Scientist, Royal Bank of Canada</h3>
+            <p>Designed a RAG-based Text-to-SQL system to boost productivity for financial advisors.</p>
+            <p>Led offer personalization for 7M+ Avion rewards clients, influencing $2.5MM in incremental spending per year.</p>
+        </div>
+        <div class="work">
+            <h3>Senior Data Scientist, Royal Bank of Canada</h3>
+            <p>Led email intent extraction, saving >$700k per year in FTE costs.</p>
+            <p>Developed an AutoML framework for model development using Scikit-Learn, NLTK, and Gensim.</p>
+        </div>
     </section>
     
     <section id="skills">
         <h2>Skills</h2>
-        <p>Python, SQL, Spark, PyTorch, TensorFlow, AWS, GCP, Airflow, Tableau</p>
+        <p><strong>Programming Languages:</strong> Python, SQL</p>
+        <p><strong>ML Engineering:</strong> Spark / PySpark, Hadoop, AWS (Sagemaker, S3, EC2), GCP BigQuery, Airflow</p>
+        <p><strong>ML Frameworks/Libraries:</strong> PyTorch, TensorFlow, Scikit-Learn, Pandas, Gensim, Hugging Face, LangChain</p>
+        <p><strong>Other relevant skills:</strong> Tableau, Dash, Jupyter, Apache Zeppelin, Git, Linux, Dataiku</p>
     </section>
     
     <section id="projects">
         <h2>Projects</h2>
-        <p><a href="https://github.com/VectorInstitute/PromptEngineering" target="_blank">Prompt Engineering Bootcamp</a></p>
-        <p><a href="https://github.com/sachinnpraburaj/YELP-Merchant-Insights-Dashboard" target="_blank">Yelp Merchant Insights Dashboard</a></p>
+        <div class="project">
+            <h3>Prompt Engineering Bootcamp</h3>
+            <p>Developed expertise in prompt engineering by tuning and optimizing prompts to enhance LLM output accuracy.</p>
+            <a href="https://github.com/VectorInstitute/PromptEngineering" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project">
+            <h3>Yelp Merchant Insights Dashboard</h3>
+            <p>Built a dashboard to display advanced marketing analytics insights to Yelp business owners using NLP.</p>
+            <a href="https://github.com/sachinnpraburaj/YELP-Merchant-Insights-Dashboard" target="_blank">View on GitHub</a>
+        </div>
     </section>
     
     <section id="contact">
