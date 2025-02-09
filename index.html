@@ -6,17 +6,37 @@
     <title>Sachin Prabhu - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #e67e22;
+            --background-color: #ecf0f1;
+            --text-color: #2c3e50;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: var(--background-color);
+            color: var(--text-color);
             text-align: center;
         }
         header {
-            background: #333;
+            background: var(--primary-color);
             color: white;
             padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .profile-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+            position: absolute;
+            left: 20px;
         }
         nav ul {
             list-style: none;
@@ -29,19 +49,28 @@
         nav ul li a {
             color: white;
             text-decoration: none;
+            font-weight: bold;
         }
         section {
             padding: 20px;
-            margin: 20px;
+            margin: 20px auto;
+            max-width: 800px;
             background: white;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .project {
-            margin-bottom: 20px;
+        h2 {
+            color: var(--accent-color);
+        }
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
         footer {
-            background: #333;
+            background: var(--secondary-color);
             color: white;
             padding: 10px;
             position: fixed;
@@ -52,40 +81,43 @@
 </head>
 <body>
     <header>
-        <h1>Sachin Prabhu Thandapani</h1>
-        <p>Data Scientist | ML Engineer | AI Enthusiast</p>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <img src="profile.jpeg" alt="Sachin Prabhu" class="profile-img">
+        <div>
+            <h1>Sachin Prabhu Thandapani</h1>
+            <p>Data Scientist | ML Engineer | AI Enthusiast</p>
+        </div>
     </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
     
     <section id="about">
         <h2>About Me</h2>
         <p>Data Scientist with 5 years of experience developing ML products with impactful business outcomes. Specializing in recommender systems, enthusiastic about generative AI, and continuously acquiring skills to build advanced ML products.</p>
     </section>
     
+    <section id="experience">
+        <h2>Work Experience</h2>
+        <p>Staff Data Scientist, Royal Bank of Canada</p>
+        <p>Senior Data Scientist, Royal Bank of Canada</p>
+    </section>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <p>Python, SQL, Spark, PyTorch, TensorFlow, AWS, GCP, Airflow, Tableau</p>
+    </section>
+    
     <section id="projects">
         <h2>Projects</h2>
-        <div class="project">
-            <h3>Prompt Engineering Bootcamp</h3>
-            <p>Developed expertise in prompt engineering by tuning and optimizing prompts to enhance LLM output accuracy. Worked on financial document analysis using Retrieval Augmented Generation (RAG) methods.</p>
-            <a href="https://github.com/VectorInstitute/PromptEngineering" target="_blank">View on GitHub</a>
-        </div>
-        <div class="project">
-            <h3>Yelp Merchant Insights Dashboard</h3>
-            <p>Built a dashboard to display advanced marketing analytics insights to Canadian Yelp business owners using NLP and time series forecasting techniques.</p>
-            <a href="https://github.com/sachinnpraburaj/YELP-Merchant-Insights-Dashboard" target="_blank">View on GitHub</a>
-        </div>
-        <div class="project">
-            <h3>Intelligent Travel Recommendation System</h3>
-            <p>Created a personalized travel itinerary using recommender algorithms like Matrix Factorization, RBM, and a hybrid approach to recommend hotels, attractions, and restaurants.</p>
-            <a href="https://github.com/sachinnpraburaj/Intelligent-Travel-Recommendation-System" target="_blank">View on GitHub</a>
-            <a href="https://youtu.be/V635gdcw1h0" target="_blank">Watch Demo</a>
-        </div>
+        <p><a href="https://github.com/VectorInstitute/PromptEngineering" target="_blank">Prompt Engineering Bootcamp</a></p>
+        <p><a href="https://github.com/sachinnpraburaj/YELP-Merchant-Insights-Dashboard" target="_blank">Yelp Merchant Insights Dashboard</a></p>
     </section>
     
     <section id="contact">
@@ -100,4 +132,3 @@
     </footer>
 </body>
 </html>
-
